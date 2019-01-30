@@ -4,15 +4,10 @@ Image data augmentation for learning algorithm. This repo is highly based on tak
 
 ## Installation Dependencies:
 
-* Python 2.7
+* Python 3.x
 * numpy
 * scikit-image
 
-You can install with pip or just clone the repo:
-
-```
-pip install pydaag
-```
 
 ## How to use:
 Your input images should be a numpy arrary with shape (img_numbers, img_rows, img_cols, img_channels).
@@ -43,7 +38,7 @@ You can find an example in test\test.py.
 Run the test file:
 ```
 git clone https://github.com/taoyizhi68/py-data-augmentation.git
-cd py-data-augmentation\test
+cd py-data-augmentation
 python test.py
 ```
 
