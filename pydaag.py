@@ -4,7 +4,7 @@ from skimage import data, io, filters, transform
 from rotate import rotate
 
 def guassian_blur(images, blur_max_sigma):
-	for i in xrange(images.shape[0]):
+	for i in range(images.shape[0]):
 		blur_sigma = np.random.uniform(0, blur_max_sigma)
 		if blur_sigma > 0:
 			images[i] = skimage.filters.gaussian(images[i], sigma=blur_sigma, multichannel=True)
@@ -15,7 +15,7 @@ def gaussian_noise(images, noise_max_sigma, img_rows, img_cols, img_channels):
 		noise_shape = (img_rows, img_cols, img_channels)
 	else:
 		noise_shape = (img_rows, img_cols)
-	for i in xrange(images.shape[0]):
+	for i in range(images.shape[0]):
 		noise_sigma = np.random.uniform(0, noise_max_sigma)
 		gaussian_noise = np.random.normal(loc=0, scale=noise_sigma, size=noise_shape)
 		images[i] = images[i] * scale_ratio + gaussian_noise
@@ -33,7 +33,7 @@ def slide(images, img_rows, img_cols, x_max_slide, y_max_slide):
 
 	x_max_slide *= float(img_cols)
 	y_max_slide *= float(img_rows)
-	for i in xrange(images.shape[0]):
+	for i in range(images.shape[0]):
 		x_slide = np.random.uniform(-x_max_slide, x_max_slide)
 		y_slide = np.random.uniform(-y_max_slide, y_max_slide)
 

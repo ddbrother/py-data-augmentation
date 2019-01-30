@@ -5,7 +5,7 @@ def rotate(images, x_max_rotation, y_max_rotation, z_max_rotation, img_rows, img
 	assert(x_max_rotation >= 0)
 	assert(y_max_rotation >= 0)
 	assert(z_max_rotation >= 0)
-	for i in xrange(images.shape[0]):
+	for i in range(images.shape[0]):
 		x_rotation = np.random.uniform(-x_max_rotation, x_max_rotation) * np.pi / 180
 		y_rotation = np.random.uniform(-y_max_rotation, y_max_rotation) * np.pi / 180
 		z_rotation = np.random.uniform(-z_max_rotation, z_max_rotation) * np.pi / 180
